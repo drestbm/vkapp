@@ -1,0 +1,39 @@
+.Wrapper{
+  display: grid;
+  grid-template-columns: 0.9fr;
+  grid-template-rows: 0.5fr 0.1fr 0.15fr 0.15fr;
+  height: 100%;
+  grid-gap: 10px;
+  justify-content: center;
+  background-color: #FFF;
+}
+.Img-contain{
+  display: grid;
+  justify-content: center;
+  align-content: end;
+  grid-template-columns: 0.9fr;
+}
+.Img{
+  width: 100%;
+}
+.Text-contain{
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+.Text{
+  font-family: Tahoma;
+  font-size: 20px;
+  line-height: 24px;
+  color: #575757;
+    
+}
+.But-contain {
+  background: linear-gradient(90deg, #FFBF85 0%, #FF7981 100%);
+  border-radius: 15px;
+  font-family: Tahoma;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFF;
+}
+
