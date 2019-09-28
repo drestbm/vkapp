@@ -1,7 +1,10 @@
+#start{
+  background-color: #FFF;
+}
 .Wrapper{
   display: grid;
   grid-template-columns: 0.9fr;
-  grid-template-rows: 0.5fr 0.1fr 0.15fr 0.15fr;
+  grid-template-rows: 0.3fr 0.1fr 0.15fr 0.15fr 0.8fr;
   height: 100%;
   grid-gap: 10px;
   justify-content: center;
@@ -13,7 +16,7 @@
   align-content: end;
   grid-template-columns: 0.9fr;
 }
-.Img{
+.Img-full{
   width: 100%;
 }
 .Text-contain{

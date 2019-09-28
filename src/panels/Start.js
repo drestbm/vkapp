@@ -6,36 +6,51 @@ import persik from '../img/main.svg';
 import './Start.css';
 
 
-const Start = ({ id, go, fetchedUser}) => (
-	<Panel id={id}>
-	<div className="Wrapper">
-		<div className="Img-contain">
-		<img className="Img" src={persik} alt="Persik The Cat"/>
-		</div>
-		<div className="Text-contain">
-			<h1 className="Text">Сделаем мир лучше!</h1>
-		</div>
-		<div className="But-contain" onClick={go} data-to="volMain">
-			Я волонтёр
-		</div>
-		<div className="But-contain" onClick={go} data-to="orgMain">
-			Я организатор
-		</div>
-	</div>
-	</Panel>
-);
+export default class Start extends React.Component{
+	state={
+		status: null
+	};
+	
+	handleClickTrue = ()=>{
+		this.props.go("volMain");
+		this.setState({status: true});
+	};
 
-Start.propTypes = {
-	id: PropTypes.string.isRequired,
-	go: PropTypes.func.isRequired,
-	fetchedUser: PropTypes.shape({
-		photo_200: PropTypes.string,
-		first_name: PropTypes.string,
-		last_name: PropTypes.string,
-		city: PropTypes.shape({
-			title: PropTypes.string,
-		}),
-	}),
-};
+	handleClickFalse = ()=>{
+		this.props.go("orgMain");
+		this.setState({status: false});
+	};
+	
+	render(){
+		return (<Panel id={this.props.id}>
+				<div className="Wrapper">
+					<div className="Img-contain">
+						<img className="Img-full" src={persik} alt="Persik The Cat"/>
+					</div>
+					<div className="Text-contain">
+						<h1 className="Text">Сделаем мир лучше!</h1>
+					</div>
+					<div className="But-contain" onClick={this.handleClickTrue}>
+						Я волонтёр
+					</div>
+					<div className="But-contain" onClick={this.handleClickFalse}>
+						Я организатор
+					</div>
+				</div>
+			</Panel>
+		)
+	}
+}
 
-export default Start;
+// Start.propTypes = {
+// 	id: PropTypes.string.isRequired,
+// 	go: PropTypes.func.isRequired,
+// 	fetchedUser: PropTypes.shape({
+// 		photo_200: PropTypes.string,
+// 		first_name: PropTypes.string,
+// 		last_name: PropTypes.string,
+// 		city: PropTypes.shape({
+// 			title: PropTypes.string,
+// 		}),
+// 	}),
+// };
