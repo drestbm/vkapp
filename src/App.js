@@ -93,7 +93,6 @@ export default class App extends React.Component {
 						console.log(e.detail.type);
 				}
 			});
-			
 		}
 	}
 

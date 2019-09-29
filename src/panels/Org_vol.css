@@ -7,7 +7,7 @@
   justify-content: center;
   align-content: center;
 }
-.Menu-event{
+/* .Menu-event{
   padding: 3% 0 0 0;
   margin: 2% 0 0 0;
   height:70%;
@@ -40,7 +40,7 @@
   height: 60%;
   grid-column-start: 12;
   grid-column-end: 18;
-}
+} */
 
 .Event-list{
   display: grid;

@@ -1,1 +1,46 @@
+.Wrapper-od{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 0.13fr 0.7fr;
+  justify-content: center;
+  align-content: center;
+}
 
+.Menu-event{
+  
+  display: grid;
+  grid-template-columns: 0.3fr 0.3fr 0.3fr;
+  justify-content: center;
+  align-content: center;
+  background-color: #FFF;
+
+  font-family: Tahoma;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #484848;
+}
+
+.menu-descr{
+  height: 100%;
+  width: 100%;
+  text-decoration: underline red;
+}
+
+.menu-task{
+  height: 100%;
+  width: 100%;
+}
+
+.menu-vol{
+  height: 100%;
+  width: 100%;
+}
+
+.Descr-event{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.3fr 0.7fr;
+  justify-content: center;
+  align-content: center;
+}
