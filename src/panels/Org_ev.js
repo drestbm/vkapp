@@ -24,9 +24,9 @@ export default class OrgMain extends React.Component {
 					<h1 className="Text">Мероприятия</h1>
 				</div>
 				<div className="Menu-event">
-					<a className="menu-descr">Описание</a>
+					<a className="menu-descr" onClick={()=>this.props.select("orgDescr", this.props.event.id)}>Описание</a>
 					<a className="menu-task">Задачи</a>
-					<a className="menu-vol">Волонтеры</a>
+					<a className="menu-vol" onClick={()=>this.props.select("orgVol", this.props.event.id)}>Волонтеры</a>
 				</div>
 				<div className="Event-list">
 					<div className="Event-contain" onClick={()=>this.props.go("")}>
@@ -35,12 +35,17 @@ export default class OrgMain extends React.Component {
 						<h2 className="Descr-create">КаСтЫлЬ</h2>
 					</div>
 					
-					{/* {this.props.events.map((event)=>
-					(<div className="Event-contain" onClick={()=>this.props.go("")}>
-						<h1 className="Name">{event.title}</h1>
-						<h2 className="Descr">Дата</h2>
+					{this.props.tasks.data != undefined ? 
+					this.props.tasks.data.map((task)=>
+					(<div className="Event-contain">
+						<h1 className="Name">{task.title}</h1>
+						<h2 className="Descr">{task.min_volunteers}</h2>
+						<h2 className="Descr">{task.priority}</h2>
+						<h2 className="Descr">{task.txt}</h2>
 					</div>)
-					)};				 */}
+					):(<div className="Event-contain">
+					<h1 className="Name">Задачи отсутствуют</h1>
+					</div>)}		
 				</div>
 			</div>
 		</Panel>)

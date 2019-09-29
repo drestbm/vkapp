@@ -1,0 +1,150 @@
+.Wrapper-om{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  height: 100%;
+  grid-gap: 10px;
+  justify-content: center;
+  align-content: center;
+}
+.Menu-event{
+  padding: 3% 0 0 0;
+  margin: 2% 0 0 0;
+  height:70%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(20,0.05fr);
+  justify-content: center;
+  align-content: center;
+  background-color: #FFF;
+
+  font-family: Tahoma;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #484848;
+}
+
+.menu-descr{
+  height: 60%;
+  grid-column-start: 2;
+  grid-column-end: 6;
+}
+.menu-task{
+  height: 60%;
+  grid-column-start: 8.5;
+  grid-column-end: 11;
+  text-decoration: underline red;
+}
+.menu-vol{
+  height: 60%;
+  grid-column-start: 12;
+  grid-column-end: 18;
+}
+
+.Event-list{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 0.4fr 0.4fr;
+  height: 100%;
+  grid-gap: 10px;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.back{
+  color: #000;
+  position: absolute;
+  top: 6%;
+}
+
+.Event-contain{
+  margin: 1%;
+  width: 98%;
+  display: grid;
+  grid-template-columns: 0.2fr 0.4fr;
+  grid-template-rows: 0.2fr 0.2fr;
+  align-content: center;
+  border-radius: 15px;
+  background-color: #FFF;
+  height: 100%;
+}
+.Create{
+  display: flex;
+  margin: 10%;
+  font-family: Tahoma;
+  font-size: 18px;  
+  line-height: 22px;
+  /* grid-row-start: 1;
+  grid-row-end: 3; */
+  align-items: center;
+  justify-content: flex-start;
+}
+.Name{
+  font-family: Tahoma;
+  font-size: 18px;
+  line-height: 22px;
+  margin: 10% 0 0 10%;
+}
+.temp {
+  color: #FFF;
+}
+.Descr{
+  font-family: Tahoma;
+  font-size: 14px;
+  line-height: 17px;
+  color: #AFAFAF;
+  margin: 0 0 10% 10%;
+}
+.Descr-create{
+  font-family: Tahoma;
+  font-size: 14px;
+  line-height: 17px;
+  color: #FFF;
+  margin: 0 0 10% 10%;
+}
+.Event{
+  width: 100%;
+}
+.Img-circle-create{
+  width: 100%;
+  border-radius: 100%;
+  margin: 1px;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.Img-circle{
+  width: 100%;
+  border-radius: 100%;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  margin: 1px;
+}
+.Text-contain-om{
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background-color: #FFF;
+}
+.Text{
+  font-family: Tahoma;
+  font-size: 20px;
+  line-height: 24px;
+  color: #575757;
+    
+}
+.But-contain {
+  background: linear-gradient(90deg, #FFBF85 0%, #FF7981 100%);
+  border-radius: 15px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+.But {
+  font-family: Tahoma;
+  font-size: 20%;
+  line-height: 24px;
+  color: #FFF;
+}

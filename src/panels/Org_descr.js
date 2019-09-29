@@ -9,38 +9,39 @@ import Panel from '@vkontakte/vkui/dist/components/Panel/Panel';
 // import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 
 import persik from '../img/plus.svg';
-import './Org_vol.css';
+import './Org_descr.css';
 import { isTemplateElement } from '@babel/types';
+import { SSL_OP_EPHEMERAL_RSA } from 'constants';
 
 export default class OrgMain extends React.Component {
 	state = {
-
+		event: null
 	};
+	UNSAFE_componentWillRecieveProps(nextProps){
+		console.log("////////")
+		console.log(nextProps);
+		this.setState({event: nextProps.event});
+	}
 	render(){
 		return(<Panel id={this.props.id}>
+			{}
 			<div className="Wrapper-om">
 				<div className="Text-contain-om">
 					<a className="back" onClick={()=>this.props.go("start")}> BACK </a>
 					<h1 className="Text">Мероприятия</h1>
 				</div>
 				<div className="Menu-event">
-				<a className="menu-descr" onClick={()=>this.props.select("orgDescr", this.props.event.id)}>Описание</a>
-					<a className="menu-task"  onClick={()=>this.props.select("orgEv", this.props.event.id)}>Задачи</a>
-					<a className="menu-vol">Волонтеры</a>
+					<a className="menu-descr">Описание</a>
+					<a className="menu-task" onClick={()=>this.props.select("orgEv", this.props.event.id)}>Задачи</a>
+					<a className="menu-vol" onClick={()=>this.props.select("orgVol", this.props.event.id)}>Волонтеры</a>
 				</div>
+				<img className="Img-circle" src={this.props.event.image} alt="Persik The Cat"/>
 				<div className="Event-list">
-					<div className="Event-contain" onClick={()=>this.props.go("")}>
-						<img className="Img-circle" src={persik} alt="Persik The Cat"/>
-						<h1 className="Name">Создать</h1>
-						<h2 className="Descr-create">КаСтЫлЬ</h2>
+				<h1 className="Descr-create">{this.props.event.title}</h1>
+					<div className="Event-contain">
+						<h2 className="Descr-create">{String(this.props.event.date).substr(0.10)}</h2>
+						<h2 className="Descr-create">{this.props.event.description}</h2>
 					</div>
-					
-					{/* {this.props.events.map((event)=>
-					(<div className="Event-contain" onClick={()=>this.props.go("")}>
-						<h1 className="Name">{event.title}</h1>
-						<h2 className="Descr">Дата</h2>
-					</div>)
-					)};				 */}
 				</div>
 			</div>
 		</Panel>)

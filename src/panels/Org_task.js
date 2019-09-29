@@ -24,23 +24,23 @@ export default class OrgMain extends React.Component {
 					<h1 className="Text">Мероприятия</h1>
 				</div>
 				<div className="Menu-event">
-				<a className="menu-descr" onClick={()=>this.props.select("orgDescr", this.props.event.id)}>Описание</a>
-					<a className="menu-task"  onClick={()=>this.props.select("orgEv", this.props.event.id)}>Задачи</a>
+					<a className="menu-descr">Описание</a>
+					<a className="menu-task">Задачи</a>
 					<a className="menu-vol">Волонтеры</a>
 				</div>
+				<img className="Img-circle" src={persik} alt="Persik The Cat"/>
 				<div className="Event-list">
+				<h1 className="Descr-create">КаСтЫлЬ</h1>
 					<div className="Event-contain" onClick={()=>this.props.go("")}>
-						<img className="Img-circle" src={persik} alt="Persik The Cat"/>
-						<h1 className="Name">Создать</h1>
+						<h2 className="Descr-create">КаСтЫлЬ</h2>
+						<h2 className="Descr-create">КаСтЫлЬ</h2>
+						<h2 className="Descr-create">КаСтЫлЬ</h2>
+						<h2 className="Descr-create">КаСтЫлЬ</h2>
+						<h2 className="Descr-create">КаСтЫлЬ</h2>
+						<h2 className="Descr-create">КаСтЫлЬ</h2>
+						<h2 className="Descr-create">КаСтЫлЬ</h2>
 						<h2 className="Descr-create">КаСтЫлЬ</h2>
 					</div>
-					
-					{/* {this.props.events.map((event)=>
-					(<div className="Event-contain" onClick={()=>this.props.go("")}>
-						<h1 className="Name">{event.title}</h1>
-						<h2 className="Descr">Дата</h2>
-					</div>)
-					)};				 */}
 				</div>
 			</div>
 		</Panel>)
