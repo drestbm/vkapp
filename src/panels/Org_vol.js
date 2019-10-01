@@ -10,6 +10,10 @@ import Panel from '@vkontakte/vkui/dist/components/Panel/Panel';
 
 import persik from '../img/plus.svg';
 import './Org_vol.css';
+import s1 from '../img/d1.jpg';
+import s3 from '../img/d2.jpg';
+import s4 from '../img/d3.jpg';
+import s2 from '../img/arrow.svg';
 import { isTemplateElement } from '@babel/types';
 
 export default class OrgMain extends React.Component {
@@ -20,7 +24,7 @@ export default class OrgMain extends React.Component {
 		return(<Panel id={this.props.id}>
 			<div className="Wrapper-om">
 				<div className="Text-contain-om">
-					<a className="back" onClick={()=>this.props.go("start")}> BACK </a>
+					<img className="back" onClick={()=>this.props.go("orgMain")} src={s2}/>
 					<h1 className="Text">Мероприятия</h1>
 				</div>
 				<div className="Menu-event">
@@ -41,6 +45,21 @@ export default class OrgMain extends React.Component {
 						<h2 className="Descr">Дата</h2>
 					</div>)
 					)};				 */}
+					<div className="Event-contain" >
+							<img className="Img-circle" src={s1} alt="Мноцик Алина"/>
+							<h1 className="Name">Мноцик Алина</h1>
+							<h2 className="Descr">Помыть собак</h2>
+					</div>
+					<div className="Event-contain">
+							<img className="Img-circle" src={s3} alt="Хван Дмитрий"/>
+							<h1 className="Name">Хван Дмитрий</h1>
+							<h2 className="Descr">Покормить собак</h2>
+					</div>
+					<div className="Event-contain">
+							<img className="Img-circle" src={s4} alt="Тохунц Давид"/>
+							<h1 className="Name">Тохунц Давид</h1>
+							<h2 className="Descr">Задача: Поиграть</h2>
+					</div>
 				</div>
 			</div>
 		</Panel>)

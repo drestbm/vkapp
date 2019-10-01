@@ -24,9 +24,12 @@
 .menu-descr{
   height: 100%;
   width: 100%;
-  text-decoration: underline red;
 }
 
+.back{
+  margin-top: 8%;
+  width: 5%;
+}
 .menu-task{
   height: 100%;
   width: 100%;
@@ -38,9 +41,10 @@
 }
 
 .Descr-event{
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 0.3fr 0.7fr;
-  justify-content: center;
-  align-content: center;
+  text-align: center;
+  font-family: Tahoma;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #484848;
 }

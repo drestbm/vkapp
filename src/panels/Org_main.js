@@ -3,10 +3,14 @@ import Panel from '@vkontakte/vkui/dist/components/Panel/Panel';
 
 import persik from '../img/plus.svg';
 import './Org_main.css';
+import s1 from '../img/photo.jpg';
+import s2 from '../img/photo2.jpg';
 import { getOffsetRect } from '@vkontakte/vkui/dist/lib/offset';
 
 export default class OrgMain extends React.Component {
 	state = {};
+
+	handle=()=>{this.props.go("orgDescr")}
 
 	render(){
 		return(<Panel id={this.props.id}>
@@ -29,13 +33,15 @@ export default class OrgMain extends React.Component {
 						</div>
 					)):(<div className="Event-contain">
 					<h1 className="Name">Мероприятия отсутствуют</h1> */}
-					<div className="Event-contain" onClick={()=>this.props.go("orgDescr")}>
-							<img className="Img-circle" src="../img/photo.jpg" alt="Помоги собаке"/>
+					{/* (e) => this.handle(e) */}
+					
+					<div className="Event-contain" onClick={()=>{this.props.go("orgDescr")}}>
+							<img className="Img-circle" src={s1} alt="Помоги собаке"/>
 							<h1 className="Name">Помоги собаке</h1>
 							<h2 className="Descr">30.09.19 12:00</h2>
 					</div>
 					<div className="Event-contain">
-							<img className="Img-circle" src="../img/photo.jpg" alt="Старость в радость"/>
+							<img className="Img-circle" src={s2} alt="Старость в радость"/>
 							<h1 className="Name">Старость в радость</h1>
 							<h2 className="Descr">21.10.19 14:00</h2>
 					</div>

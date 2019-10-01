@@ -9,6 +9,8 @@ import Panel from '@vkontakte/vkui/dist/components/Panel/Panel';
 // import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 
 import persik from '../img/plus.svg';
+import s1 from '../img/zad.svg';
+import s2 from '../img/arrow.svg';
 import './Org_ev.css';
 import { isTemplateElement } from '@babel/types';
 
@@ -20,7 +22,7 @@ export default class OrgMain extends React.Component {
 		return(<Panel id={this.props.id}>
 			<div className="Wrapper-om">
 				<div className="Text-contain-om">
-					<a className="back" onClick={()=>this.props.go("start")}> BACK </a>
+					<img className="back" onClick={()=>this.props.go("orgMain")} src={s2}/>
 					<h1 className="Text">Мероприятия</h1>
 				</div>
 				<div className="Menu-event">
@@ -35,17 +37,18 @@ export default class OrgMain extends React.Component {
 						<h2 className="Descr-create">КаСтЫлЬ</h2>
 					</div>
 					
-					{this.props.tasks.data != undefined ? 
-					this.props.tasks.data.map((task)=>
-					(<div className="Event-contain">
-						<h1 className="Name">{task.title}</h1>
-						<h2 className="Descr">{task.min_volunteers}</h2>
-						<h2 className="Descr">{task.priority}</h2>
-						<h2 className="Descr">{task.txt}</h2>
-					</div>)
-					):(<div className="Event-contain">
-					<h1 className="Name">Задачи отсутствуют</h1>
-					</div>)}		
+					<div className="Event-contain" >
+							<img className="Img-circle" src={s1} alt="Помыть собак"/>
+							<h1 className="Name">Помыть собак</h1>
+					</div>
+					<div className="Event-contain">
+							<img className="Img-circle" src={s1} alt="Раздать еду"/>
+							<h1 className="Name">Раздать еду</h1>
+					</div>
+					<div className="Event-contain">
+							<img className="Img-circle" src={s1} alt="Поиграть"/>
+							<h1 className="Name">Поиграть</h1>
+					</div>
 				</div>
 			</div>
 		</Panel>)

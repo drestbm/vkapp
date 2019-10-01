@@ -58,17 +58,16 @@ export default class App extends React.Component {
 
 
 	go = e => { 
-		if (e == 'volMain')
-			axios.post("https://vkmanage.herokuapp.com/volunteers/register/", this.state.fetchedUser)
-				.then(res=>{
-					this.setState({status:3})
-			});
-		else if (e = 'orgMain')
-			axios.post("https://vkmanage.herokuapp.com/organizers/register/", this.state.fetchedUser)
-				.then(res=>{
-					this.setState({status:1})
-			});
-		this.get_events();
+		// if (e == 'volMain')
+		// 	axios.post("https://vkmanage.herokuapp.com/volunteers/register/", this.state.fetchedUser)
+		// 		.then(res=>{
+		// 			this.setState({status:3})
+		// 	});
+		// else if (e = 'orgMain')
+		// 	axios.post("https://vkmanage.herokuapp.com/organizers/register/", this.state.fetchedUser)
+		// 		.then(res=>{
+		// 			this.setState({status:1})
+		// 	});
 		this.setState({activePanel: e});
 	};
 
